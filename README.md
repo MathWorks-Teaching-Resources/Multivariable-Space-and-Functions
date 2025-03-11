@@ -5,17 +5,17 @@
 <a id="H_053613DF"></a>
 
 
-[![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/XXXXX-PROJECTNAME) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Multivariable-Space-and-Functions&project=Space.prj&file=README.m)
+[![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/XXXXX-PROJECTNAME) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Multivariable-Space-and-Functions&project=Space.prj&file=README.mlx)
 
 [![MATLAB Versions Tested](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMathWorks-Teaching-Resources%2FMultivariable-Space-and-Functions%2Frelease%2FImages%2FTestedWith.json)](https://MathWorks-Teaching-Resources.github.io/Multivariable-Space-and-Functions)
 
 **Curriculum Module**
 
-_Created with R2025a. Compatible with R2025a and later releases._
+_Created with R2024a. Compatible with R2024a and later releases._
 
 # Information
 
-This curriculum module contains interactive [MATLAB® live scripts](https://www.mathworks.com/products/matlab/live-editor.html) that teach and apply standard concepts related to representing two and three dimensional space.
+This curriculum module contains interactive [MATLAB® live scripts](https://www.mathworks.com/products/matlab/live-editor.html) that teach and apply standard concepts related to representing two and three\-dimensional space.
 
 <a id="H_F00D98E4"></a>
 
@@ -50,7 +50,7 @@ Use the [<img src="Images/OpenInMO.png" width="136" alt="OpenInMO.png">](https:/
 
 ### **On Desktop:**
 
-Download or clone this repository. Open MATLAB, navigate to the folder containing these scripts and double\-click on [Space.prj](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Multivariable-Space-and-Functions&project=Space.prj&file=README.m). It will add the appropriate files to your MATLAB path and open an app that asks you where you would like to start. 
+Download or clone this repository. Open MATLAB, navigate to the folder containing these scripts, and double\-click [Space.prj](<matlab: openProject("Space.prj")>). It will add the appropriate files to your MATLAB path and open an app asking where you would like to start. 
 
 
 Ensure you have all the required products ([listed below](#H_E850B4FF)) installed. If you need to include a product, add it using the Add\-On Explorer. To install an add\-on, go to the **Home** tab and select  <img src="Images/AddOnsIcon.png" width="16" alt="AddOnsIcon.png"> **Add-Ons** > **Get Add-Ons**. 
@@ -59,34 +59,24 @@ Ensure you have all the required products ([listed below](#H_E850B4FF)) installe
 
 ## Products
 
-MATLAB® and Symbolic Math Toolbox™ are used throughout. Tools from \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ *(list of other used toolboxes)* are used frequently as well. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ *(function from following toolbox)* is used from \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ *(toolbox containing previously mentioned function).*
-
-
-*List of common products (not to be included in published README):*
-
--  Simulink® 
--  Stateflow® 
--  Simscape™ 
--  Statistics and Machine Learning Toolbox™ 
--  Curve Fitting Toolbox™ 
--  Optimization Toolbox™ 
-
-*If your module uses a product not on this list, you can find it* [*here*](https://www.mathworks.com/products.html)*.*
+MATLAB® and Symbolic Math Toolbox™ are used throughout. Tools from the Mapping Toolbox™ are used in the Further Exploration in the [CoordinateSystems](#M_0493) script. 
 
 <a id="H_E8C62B23"></a>
 
 # Scripts
-## [**CoordinateSystems.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Multivariable-Space-and-Functions&project=Space.prj&file=Scripts/CoordinateSystems.m) 
+<a id="M_0493"></a>
+
+## [**CoordinateSystems.mlx**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Multivariable-Space-and-Functions&project=Space.prj&file=Scripts/CoordinateSystems.mlx) 
 ||||
 | :-- | :-- | :-- |
-| <img src="Images/ShapesCard.png" width="159" alt="ShapesCard.png"> <br>  | **In this script, students will...** <br> $\bullet$ Use polar, spherical, cartesian, and cylindrical coordinates to identify points, curves, surfaces, and volumes in space. <br> $\bullet$ Convert points, curves, surfaces, and volumes between different coordinate representations. <br> $\bullet$ Choose coordinate systems to describe given geometric objects and explain their choice. <br>  | **Academic disciplines** <br> $\bullet$ Electrical Engineering <br> $\bullet$ Physics <br> $\bullet$ Navigation <br> $\bullet$ Mathematics <br>   |
+| <img src="Images/ShapesCard.png" width="159" alt="ShapesCard.png"> <br>  | **In this script, students will...** <br> $\bullet$ Use polar, spherical, cartesian, and cylindrical coordinates to identify points, curves, surfaces, and volumes in space. <br> $\bullet$ Convert points, curves, surfaces, and volumes between different coordinate representations. <br> $\bullet$ Choose coordinate systems to describe given geometric objects and explain their choice. <br>  | **Academic disciplines** <br> $\bullet$ Electrical Engineering <br> $\bullet$ Mechanical Engineering <br> $\bullet$ Navigation <br> $\bullet$ Mathematics <br>   |
 
-## [**VectorFields.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Multivariable-Space-and-Functions&project=Space.prj&file=Scripts/VectorFields.m) 
+## **VectorFields** (planned)
 ||||
 | :-- | :-- | :-- |
 | <img src="Images/VectorFieldCard.png" width="171" alt="VectorFieldCard.png"> <br>  | **In this script, students will...** <br> $\bullet$ Visualize 2D and 3D vector fields <br> $\bullet$ Visualize 2D and 3D contour plots <br> $\bullet$ Define control surfaces and control volumes <br>  | **Academic disciplines** <br> $\bullet$ Electrical Engineering <br> $\bullet$ Mechanical Engineering <br> $\bullet$ Physics <br> $\bullet$ Meteorology <br> $\bullet$ Mathematics <br>   |
 
-## [**ParametricEquations.m**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Multivariable-Space-and-Functions&project=Space.prj&file=Scripts/ParametricEquations.m) 
+## **ParametricEquations (planned)**
 ||||
 | :-- | :-- | :-- |
 | <img src="Images/ParametrizedFlower.png" width="171" alt="ParametrizedFlower.png"> <br>  | **In this script, students will...** <br> $\bullet$ Identify a parametric expression for a given path in space. <br> $\bullet$ Visualize a path given as a parametric equation. <br> $\bullet$ Explore applications of parametric equations to represent space\-time data <br>  | **Academic disciplines** <br> $\bullet$ Navigation <br> $\bullet$ Robotics <br> $\bullet$ Mathematics <br>   |
@@ -102,8 +92,6 @@ The license for this module is available in the [LICENSE.md](https://github.com/
 | **Courseware Module** <br>  | **Sample Content** <br>  | **Available on:** <br>   |
 | :-- | :-- | :-- |
 | [**Applied Partial Differential Equations**](https://www.mathworks.com/matlabcentral/fileexchange/172650-applied-partial-differential-equations) <br>  | <img src="Images/AppliedPDEsCard.png" width="171" alt="AppliedPDEsCard.png"> <br>  | [<img src="Images/OpenInFX.png" width="91" alt="OpenInFX.png">](https://www.mathworks.com/matlabcentral/fileexchange/172650-applied-partial-differential-equations) <br> [<img src="Images/OpenInMO.png" width="136" alt="OpenInMO.png">](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Applied-PDEs&project=AppliedPDEs.prj&file=README.mlx) <br> [GitHub](https://github.com/MathWorks-Teaching-Resources/Applied-PDEs) <br>   |
-| Multivariable: Derivatives <br>  | <img src="Images/GradientCard.png" width="171" alt="GradientCard.png"> <br>  |   |
-| Multivariable: Integrals <br>  | \[catchy image here\] <br>  |   |
 
 
 Or feel free to explore our other [modular courseware content](https://www.mathworks.com/matlabcentral/fileexchange/?q=tag%3A%22courseware+module%22&sort=downloads_desc_30d).
