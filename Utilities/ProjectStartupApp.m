@@ -3,26 +3,28 @@ classdef ProjectStartupApp < matlab.apps.AppBase
     % Properties that correspond to app components
     properties (Access = public)
         StartUpAppUIFigure  matlab.ui.Figure
-        TabGroup            matlab.ui.container.TabGroup
-        WelcomeTab          matlab.ui.container.Tab
-        Image               matlab.ui.control.Image
-        READMEButton        matlab.ui.control.Button
-        ReviewUsButton      matlab.ui.control.Button
-        MainMenuButton      matlab.ui.control.Button
-        WelcomeTitle        matlab.ui.control.Label
-        TabReview           matlab.ui.container.Tab
+        FeedBackPanel       matlab.ui.container.Panel
+        FeedBackGrid        matlab.ui.container.GridLayout
+        ReviewTitle         matlab.ui.control.Label
+        ReviewText          matlab.ui.control.Label
         OtherButton         matlab.ui.control.Button
         StudentButton       matlab.ui.control.Button
         FacultyButton       matlab.ui.control.Button
         Q1                  matlab.ui.control.Label
-        ReviewTitle         matlab.ui.control.Label
-        ReviewText          matlab.ui.control.Label
+        WelcomePanel        matlab.ui.container.Panel
+        WelcomeGrid         matlab.ui.container.GridLayout
+        WelcomeTitle        matlab.ui.control.Label
+        CoverImage          matlab.ui.control.Image
+        ReviewUsButton      matlab.ui.control.Button
+        READMEButton        matlab.ui.control.Button
+        MainMenuButton      matlab.ui.control.Button
     end
 
     
     properties (Access = private)
         GitHubOrganization = "MathWorks-Teaching-Resources"; % Description
         GitHubRepository = "Multivariable-Space-and-Functions";
+        InitPosition;
     end
 %% How to customize the app?    
 %{
@@ -33,7 +35,7 @@ classdef ProjectStartupApp < matlab.apps.AppBase
     1. Change "Module Template" in app.WelcomeTitle by your module name
     2. Change "Module Template" in app.ReviewTitle by your module name
     3. Change the GitHubRepository (line 25) to the correct value
-    4. Change image in app.Image by the cover image you would like for your
+    4. Change image in app.CoverImage by the cover image you would like for your
        module. This image should be located in rootFolder/Images
     5. Create your MS Form:
         a. Make a copy of the Faculty and the Student Template surveys
@@ -48,7 +50,7 @@ classdef ProjectStartupApp < matlab.apps.AppBase
         d. Click "Share", Select "Anyone with a link", Select "View"
         e. Copy the sway link to SetupAppLinks (see step 6).
     6. Add the Survey and Sway link to Utilities/SurveyLinks using
-    SetupAppLinks.m in InternalFiles/RequiredFunctions/StartUpFcn
+    SetupAppLinks.mlx in InternalFiles/RequiredFunctions/StartUpFcn
     7. Save > Export to .m file and save the result as
     Utilities/ProjectStartupApp.m
 
@@ -97,6 +99,9 @@ classdef ProjectStartupApp < matlab.apps.AppBase
 
         % Code that executes after component creation
         function startupFcn(app)
+            
+            % Copy title
+            app.ReviewTitle.Text = app.WelcomeTitle.Text;
 
             % Switch tab to review if has not been reviewed yet
             if isfile(fullfile("Utilities","ProjectSettings.mat"))
@@ -107,11 +112,14 @@ classdef ProjectStartupApp < matlab.apps.AppBase
                 numLoad = 1; % Initialize counter
             end
 
-            % Switch tab for review
+            % Select tab to display
             if ~isReviewed && numLoad > 2
                 isReviewed = true;
-                app.TabGroup.SelectedTab = app.TabReview;
+                app.FeedBackGrid.Parent = app.StartUpAppUIFigure; 
+            else
+                app.WelcomeGrid.Parent = app.StartUpAppUIFigure;
             end
+            app.InitPosition = app.StartUpAppUIFigure.Position;
 
             % Save new settings
             app.saveSettings(isReviewed,numLoad)
@@ -132,7 +140,6 @@ classdef ProjectStartupApp < matlab.apps.AppBase
                 websave(fullfile("Utilities/SurveyLinks.mat"),Answer.Body.Data.download_url);
             catch
             end
-
         end
 
         % Close request function: StartUpAppUIFigure
@@ -142,7 +149,7 @@ classdef ProjectStartupApp < matlab.apps.AppBase
             elseif event.Source == app.MainMenuButton
                 open MainMenu.mlx
             elseif event.Source == app.FacultyButton
-                open MainMenu.mlx           
+                open MainMenu.mlx            
             elseif event.Source == app.StudentButton
                 open MainMenu.mlx
             elseif event.Source == app.OtherButton
@@ -181,7 +188,8 @@ classdef ProjectStartupApp < matlab.apps.AppBase
 
         % Button pushed function: ReviewUsButton
         function ReviewUsButtonPushed(app, event)
-            app.TabGroup.SelectedTab = app.TabReview;
+            app.WelcomeGrid.Parent = app.WelcomePanel;
+            app.FeedBackGrid.Parent = app.StartUpAppUIFigure;
         end
 
         % Button pushed function: READMEButton
@@ -201,110 +209,122 @@ classdef ProjectStartupApp < matlab.apps.AppBase
             app.StartUpAppUIFigure.AutoResizeChildren = 'off';
             app.StartUpAppUIFigure.Position = [100 100 276 430];
             app.StartUpAppUIFigure.Name = 'StartUp App';
-            app.StartUpAppUIFigure.Resize = 'off';
             app.StartUpAppUIFigure.CloseRequestFcn = createCallbackFcn(app, @StartUpAppUIFigureCloseRequest, true);
 
-            % Create TabGroup
-            app.TabGroup = uitabgroup(app.StartUpAppUIFigure);
-            app.TabGroup.AutoResizeChildren = 'off';
-            app.TabGroup.Position = [1 1 276 460];
+            % Create WelcomePanel
+            app.WelcomePanel = uipanel(app.StartUpAppUIFigure);
+            app.WelcomePanel.AutoResizeChildren = 'off';
+            app.WelcomePanel.Position = [-551 33 244 410];
 
-            % Create WelcomeTab
-            app.WelcomeTab = uitab(app.TabGroup);
-            app.WelcomeTab.AutoResizeChildren = 'off';
-            app.WelcomeTab.Title = 'Tab';
+            % Create WelcomeGrid
+            app.WelcomeGrid = uigridlayout(app.WelcomePanel);
+            app.WelcomeGrid.ColumnWidth = {'1x', '8x', '1x'};
+            app.WelcomeGrid.RowHeight = {'2x', '5x', '1x', '1x', '1x'};
+
+            % Create MainMenuButton
+            app.MainMenuButton = uibutton(app.WelcomeGrid, 'push');
+            app.MainMenuButton.ButtonPushedFcn = createCallbackFcn(app, @MainMenuButtonPushed, true);
+            app.MainMenuButton.FontSize = 18;
+            app.MainMenuButton.Layout.Row = 3;
+            app.MainMenuButton.Layout.Column = 2;
+            app.MainMenuButton.Text = 'Main Menu';
+
+            % Create READMEButton
+            app.READMEButton = uibutton(app.WelcomeGrid, 'push');
+            app.READMEButton.ButtonPushedFcn = createCallbackFcn(app, @READMEButtonPushed, true);
+            app.READMEButton.FontSize = 18;
+            app.READMEButton.Layout.Row = 4;
+            app.READMEButton.Layout.Column = 2;
+            app.READMEButton.Text = 'README';
+
+            % Create ReviewUsButton
+            app.ReviewUsButton = uibutton(app.WelcomeGrid, 'push');
+            app.ReviewUsButton.ButtonPushedFcn = createCallbackFcn(app, @ReviewUsButtonPushed, true);
+            app.ReviewUsButton.FontSize = 18;
+            app.ReviewUsButton.Layout.Row = 5;
+            app.ReviewUsButton.Layout.Column = 2;
+            app.ReviewUsButton.Text = 'Review Us';
+
+            % Create CoverImage
+            app.CoverImage = uiimage(app.WelcomeGrid);
+            app.CoverImage.Layout.Row = 2;
+            app.CoverImage.Layout.Column = [1 3];
+            app.CoverImage.ImageSource = 'ShapesCard.png';
 
             % Create WelcomeTitle
-            app.WelcomeTitle = uilabel(app.WelcomeTab);
+            app.WelcomeTitle = uilabel(app.WelcomeGrid);
             app.WelcomeTitle.HorizontalAlignment = 'center';
             app.WelcomeTitle.VerticalAlignment = 'top';
             app.WelcomeTitle.WordWrap = 'on';
-            app.WelcomeTitle.FontSize = 24;
+            app.WelcomeTitle.FontSize = 22;
             app.WelcomeTitle.FontWeight = 'bold';
-            app.WelcomeTitle.Position = [2 349 274 70];
+            app.WelcomeTitle.Layout.Row = 1;
+            app.WelcomeTitle.Layout.Column = [1 3];
             app.WelcomeTitle.Text = 'Multivariable: Space and Functions';
 
-            % Create MainMenuButton
-            app.MainMenuButton = uibutton(app.WelcomeTab, 'push');
-            app.MainMenuButton.ButtonPushedFcn = createCallbackFcn(app, @MainMenuButtonPushed, true);
-            app.MainMenuButton.FontSize = 18;
-            app.MainMenuButton.Position = [59 96 161 35];
-            app.MainMenuButton.Text = 'Main Menu';
+            % Create FeedBackPanel
+            app.FeedBackPanel = uipanel(app.StartUpAppUIFigure);
+            app.FeedBackPanel.AutoResizeChildren = 'off';
+            app.FeedBackPanel.Position = [-291 33 236 409];
 
-            % Create ReviewUsButton
-            app.ReviewUsButton = uibutton(app.WelcomeTab, 'push');
-            app.ReviewUsButton.ButtonPushedFcn = createCallbackFcn(app, @ReviewUsButtonPushed, true);
-            app.ReviewUsButton.FontSize = 18;
-            app.ReviewUsButton.Position = [59 10 161 35];
-            app.ReviewUsButton.Text = 'Review Us';
+            % Create FeedBackGrid
+            app.FeedBackGrid = uigridlayout(app.FeedBackPanel);
+            app.FeedBackGrid.ColumnWidth = {'1x', '8x', '1x'};
+            app.FeedBackGrid.RowHeight = {'2x', '3x', '2x', '1x', '1x', '1x'};
 
-            % Create READMEButton
-            app.READMEButton = uibutton(app.WelcomeTab, 'push');
-            app.READMEButton.ButtonPushedFcn = createCallbackFcn(app, @READMEButtonPushed, true);
-            app.READMEButton.FontSize = 18;
-            app.READMEButton.Position = [59 53 161 35];
-            app.READMEButton.Text = 'README';
+            % Create Q1
+            app.Q1 = uilabel(app.FeedBackGrid);
+            app.Q1.HorizontalAlignment = 'center';
+            app.Q1.WordWrap = 'on';
+            app.Q1.FontSize = 18;
+            app.Q1.FontWeight = 'bold';
+            app.Q1.Layout.Row = 3;
+            app.Q1.Layout.Column = [1 3];
+            app.Q1.Text = 'What describes you best?';
 
-            % Create Image
-            app.Image = uiimage(app.WelcomeTab);
-            app.Image.Position = [16 141 245 209];
-            app.Image.ImageSource = 'ShapesCard.png';
+            % Create FacultyButton
+            app.FacultyButton = uibutton(app.FeedBackGrid, 'push');
+            app.FacultyButton.ButtonPushedFcn = createCallbackFcn(app, @FacultyButtonPushed, true);
+            app.FacultyButton.FontSize = 18;
+            app.FacultyButton.Layout.Row = 4;
+            app.FacultyButton.Layout.Column = 2;
+            app.FacultyButton.Text = 'Faculty';
 
-            % Create TabReview
-            app.TabReview = uitab(app.TabGroup);
-            app.TabReview.AutoResizeChildren = 'off';
-            app.TabReview.Title = 'Tab2';
-            app.TabReview.HandleVisibility = 'off';
+            % Create StudentButton
+            app.StudentButton = uibutton(app.FeedBackGrid, 'push');
+            app.StudentButton.ButtonPushedFcn = createCallbackFcn(app, @StudentButtonPushed, true);
+            app.StudentButton.FontSize = 18;
+            app.StudentButton.Layout.Row = 5;
+            app.StudentButton.Layout.Column = 2;
+            app.StudentButton.Text = 'Student';
+
+            % Create OtherButton
+            app.OtherButton = uibutton(app.FeedBackGrid, 'push');
+            app.OtherButton.ButtonPushedFcn = createCallbackFcn(app, @OtherButtonPushed, true);
+            app.OtherButton.FontSize = 18;
+            app.OtherButton.Layout.Row = 6;
+            app.OtherButton.Layout.Column = 2;
+            app.OtherButton.Text = 'Other';
 
             % Create ReviewText
-            app.ReviewText = uilabel(app.TabReview);
+            app.ReviewText = uilabel(app.FeedBackGrid);
             app.ReviewText.HorizontalAlignment = 'center';
-            app.ReviewText.VerticalAlignment = 'top';
             app.ReviewText.WordWrap = 'on';
-            app.ReviewText.FontSize = 18;
-            app.ReviewText.Position = [16 243 245 69];
+            app.ReviewText.FontSize = 14;
+            app.ReviewText.Layout.Row = 2;
+            app.ReviewText.Layout.Column = [1 3];
             app.ReviewText.Text = 'Please help us improve your experience by answering a few questions.';
 
             % Create ReviewTitle
-            app.ReviewTitle = uilabel(app.TabReview);
+            app.ReviewTitle = uilabel(app.FeedBackGrid);
             app.ReviewTitle.HorizontalAlignment = 'center';
             app.ReviewTitle.VerticalAlignment = 'top';
             app.ReviewTitle.WordWrap = 'on';
             app.ReviewTitle.FontSize = 24;
             app.ReviewTitle.FontWeight = 'bold';
-            app.ReviewTitle.Position = [2 326 274 93];
-            app.ReviewTitle.Text = 'Multivariable: Space and Functions';
-
-            % Create Q1
-            app.Q1 = uilabel(app.TabReview);
-            app.Q1.HorizontalAlignment = 'center';
-            app.Q1.VerticalAlignment = 'top';
-            app.Q1.WordWrap = 'on';
-            app.Q1.FontSize = 18;
-            app.Q1.FontWeight = 'bold';
-            app.Q1.Position = [16 141 245 69];
-            app.Q1.Text = 'What describes you best?';
-
-            % Create FacultyButton
-            app.FacultyButton = uibutton(app.TabReview, 'push');
-            app.FacultyButton.ButtonPushedFcn = createCallbackFcn(app, @FacultyButtonPushed, true);
-            app.FacultyButton.FontSize = 18;
-            app.FacultyButton.Position = [64 127 150 40];
-            app.FacultyButton.Text = 'Faculty';
-
-            % Create StudentButton
-            app.StudentButton = uibutton(app.TabReview, 'push');
-            app.StudentButton.ButtonPushedFcn = createCallbackFcn(app, @StudentButtonPushed, true);
-            app.StudentButton.FontSize = 18;
-            app.StudentButton.Position = [64 80 150 40];
-            app.StudentButton.Text = 'Student';
-
-            % Create OtherButton
-            app.OtherButton = uibutton(app.TabReview, 'push');
-            app.OtherButton.ButtonPushedFcn = createCallbackFcn(app, @OtherButtonPushed, true);
-            app.OtherButton.FontSize = 18;
-            app.OtherButton.Position = [64 34 150 40];
-            app.OtherButton.Text = 'Other';
+            app.ReviewTitle.Layout.Row = 1;
+            app.ReviewTitle.Layout.Column = [1 3];
+            app.ReviewTitle.Text = '';
 
             % Show the figure after all components are created
             app.StartUpAppUIFigure.Visible = 'on';
