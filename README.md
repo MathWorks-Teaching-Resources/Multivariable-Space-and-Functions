@@ -59,7 +59,7 @@ Ensure you have all the required products ([listed below](#H_E850B4FF)) installe
 
 ## Products
 
-MATLAB® and Symbolic Math Toolbox™ are used throughout. Tools from the Mapping Toolbox™ are used in the Further Exploration in the [CoordinateSystems](#M_0493) script. 
+MATLAB® and Symbolic Math Toolbox™ are used throughout. Tools from the Mapping Toolbox™ are used in the Further Exploration in the [CoordinateSystems](#M_0493) script and for geographical plotting in the VectorFields script. 
 
 <a id="H_E8C62B23"></a>
 
@@ -71,10 +71,10 @@ MATLAB® and Symbolic Math Toolbox™ are used throughout. Tools from the Mappin
 | :-- | :-- | :-- |
 | <img src="Images/ShapesCard.png" width="159" alt="ShapesCard.png"> <br>  | **In this script, students will...** <br> $\bullet$ Use polar, spherical, cartesian, and cylindrical coordinates to identify points, curves, surfaces, and volumes in space. <br> $\bullet$ Convert points, curves, surfaces, and volumes between different coordinate representations. <br> $\bullet$ Choose coordinate systems to describe given geometric objects and explain their choice. <br>  | **Academic disciplines** <br> $\bullet$ Electrical Engineering <br> $\bullet$ Mechanical Engineering <br> $\bullet$ Navigation <br> $\bullet$ Mathematics <br>   |
 
-## **VectorFields** (planned)
+## [**VectorFields**](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Multivariable-Space-and-Functions&project=Space.prj&file=Scripts/VectorFields.mlx)
 ||||
 | :-- | :-- | :-- |
-| <img src="Images/VectorFieldCard.png" width="171" alt="VectorFieldCard.png"> <br>  | **In this script, students will...** <br> $\bullet$ Visualize 2D and 3D vector fields <br> $\bullet$ Visualize 2D and 3D contour plots <br> $\bullet$ Define control surfaces and control volumes <br>  | **Academic disciplines** <br> $\bullet$ Electrical Engineering <br> $\bullet$ Mechanical Engineering <br> $\bullet$ Physics <br> $\bullet$ Meteorology <br> $\bullet$ Mathematics <br>   |
+| <img src="Images/VectorFieldCard.png" width="171" alt="VectorFieldCard.png"> <br>  | **In this script, students will...** <br> $\bullet$ Visualize 2D and 3D vector fields <br> $\bullet$ Visualize 2D and 3D contour plots  | **Academic disciplines** <br> $\bullet$ Electrical Engineering <br> $\bullet$ Mechanical Engineering <br> $\bullet$ Physics <br> $\bullet$ Meteorology <br> $\bullet$ Mathematics <br>   |
 
 ## **ParametricEquations (planned)**
 ||||
@@ -91,6 +91,7 @@ The license for this module is available in the [LICENSE.md](https://github.com/
 
 | **Courseware Module** <br>  | **Sample Content** <br>  | **Available on:** <br>   |
 | :-- | :-- | :-- |
+| [**Electricity & Magnetism: Introduction**](https://www.mathworks.com/matlabcentral/fileexchange/180193-electricity-magnetism-introduction) <br>  | <img src="Images/ElecMagCard.svg" width="171" alt="AppliedPDEsCard.png"> <br>  | [<img src="Images/OpenInFX.png" width="91" alt="OpenInFX.png">](https://www.mathworks.com/matlabcentral/fileexchange/180193-electricity-magnetism-introduction) <br> [<img src="Images/OpenInMO.png" width="136" alt="OpenInMO.png">](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Electricity-Magnetism&project=emag.prj&file=README.mlx) <br> [GitHub](https://github.com/MathWorks-Teaching-Resources/Electricity-Magnetism) <br>   |
 | [**Applied Partial Differential Equations**](https://www.mathworks.com/matlabcentral/fileexchange/172650-applied-partial-differential-equations) <br>  | <img src="Images/AppliedPDEsCard.png" width="171" alt="AppliedPDEsCard.png"> <br>  | [<img src="Images/OpenInFX.png" width="91" alt="OpenInFX.png">](https://www.mathworks.com/matlabcentral/fileexchange/172650-applied-partial-differential-equations) <br> [<img src="Images/OpenInMO.png" width="136" alt="OpenInMO.png">](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Applied-PDEs&project=AppliedPDEs.prj&file=README.mlx) <br> [GitHub](https://github.com/MathWorks-Teaching-Resources/Applied-PDEs) <br>   |
 
 
