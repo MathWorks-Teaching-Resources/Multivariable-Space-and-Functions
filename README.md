@@ -9,6 +9,8 @@
 
 [![MATLAB Versions Tested](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMathWorks-Teaching-Resources%2FMultivariable-Space-and-Functions%2Frelease%2FImages%2FTestedWith.json)](https://MathWorks-Teaching-Resources.github.io/Multivariable-Space-and-Functions)
 
+This is an initial release of this module containing two scripts. Please bookmark this page or sign up for notifications for updates.
+
 **Curriculum Module**
 
 _Created with R2025a. Compatible with R2024a and later releases._
