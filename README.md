@@ -4,12 +4,11 @@
 # <span style="color:rgb(213,80,0)">Multivariable: Space and Functions</span>
 <a id="H_053613DF"></a>
 
+Learn to choose coordinate systems, visualize multivariable functions, and parameterize curves.
 
 [![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/180356-multivariable-space-and-functions) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Multivariable-Space-and-Functions&project=Space.prj&file=README.mlx)
 
 [![MATLAB Versions Tested](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMathWorks-Teaching-Resources%2FMultivariable-Space-and-Functions%2Frelease%2FImages%2FTestedWith.json)](https://MathWorks-Teaching-Resources.github.io/Multivariable-Space-and-Functions)
-
-This is an initial release of this module containing two scripts. Please bookmark this page or sign up for notifications for updates.
 
 **Curriculum Module**
 
@@ -30,7 +29,7 @@ The instructions inside the live scripts will guide you through the exercises an
 
 ## Contact Us
 
-Solutions are available upon instructor request. Contact the [MathWorks teaching resources team](mailto:onlineteaching@mathworks.com) if you would like to request solutions, provide feedback, or if you have a question.
+Contact the [MathWorks Educator Content Development Team](mailto:onlineteaching@mathworks.com) if you would like to request assistance, provide feedback, or if you have a question.
 
 <a id="H_30BC7141"></a>
 
@@ -105,7 +104,7 @@ Or feel free to explore our other [modular courseware content](https://www.mathw
 
 # Contribute 
 
-Looking for more? Find an issue? Have a suggestion? Please contact the [MathWorks teaching resources team](mailto:%20onlineteaching@mathworks.com). If you want to contribute directly to this project, you can find information about how to do so in the [CONTRIBUTING.md](https://github.com/MathWorks-Teaching-Resources/Multivariable-Space-and-Functions/blob/release/CONTRIBUTING.md) page on GitHub.
+Looking for more? Find an issue? Have a suggestion? Please contact the [MathWorks Educator Content Development Team](mailto:%20onlineteaching@mathworks.com). If you want to contribute directly to this project, you can find information about how to do so in the [CONTRIBUTING.md](https://github.com/MathWorks-Teaching-Resources/Vector-Arithmetic/blob/release/CONTRIBUTING.md) page on GitHub.
 
 
 *©* Copyright 2025 The MathWorks, Inc
