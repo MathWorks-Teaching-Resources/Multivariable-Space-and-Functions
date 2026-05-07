@@ -8,7 +8,7 @@ Learn to choose coordinate systems, visualize multivariable functions, and param
 
 [![View on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/180356-multivariable-space-and-functions) or [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Multivariable-Space-and-Functions&project=Space.prj&file=README.mlx)
 
-[![MATLAB Versions Tested](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FMathWorks-Teaching-Resources%2FMultivariable-Space-and-Functions%2Frelease%2FImages%2FTestedWith.json)](https://MathWorks-Teaching-Resources.github.io/Multivariable-Space-and-Functions)
+[![MATLAB Versions Tested](https://img.shields.io/endpoint?url=https://mathworks-teaching-resources.github.io/Multivariable-Space-and-Functions/TestedWith.json)](https://MathWorks-Teaching-Resources.github.io/Multivariable-Space-and-Functions)
 
 **Curriculum Module**
 
