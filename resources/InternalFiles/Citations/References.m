@@ -9,7 +9,7 @@
 %[text] Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. 
 %[text] Link: [https://allisonhorst.github.io/palmerpenguins/.](https://allisonhorst.github.io/palmerpenguins)
 %[text] License: [CC-0](https://creativecommons.org/share-your-work/public-domain/cc0/) (from main link)
-%[text] Data: [penguinData.csv](file:./DataSourceFiles\penguinData.csv)
+%[text] Data: `penguinData.csv` (template example dataset; not included in this module)
 %[text] 
 %[text] 
 %[text] 
@@ -17,6 +17,11 @@
 %[text] 
 %[text] 
 %[text] 
+
+
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]
 %---

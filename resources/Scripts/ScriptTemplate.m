@@ -1,5 +1,5 @@
 %[text] %[text:anchor:T_BB73E10C] # Script Title 
-%[text] [⇦ Main Menu](file:MainMenu.mlx)
+%[text] [⇦ Main Menu](file:../../MainMenu.m)
 %[text] Introductory information including applications giving reasons to care about the material.
 %[text]{"align":"center"} \[Catchy Image\]
 %[text]{"align":"center"} 
@@ -35,7 +35,7 @@
 %%
 %[text] %[text:anchor:H_25F89626] ## Further Exploration
 %%
-%[text] [⇦ Return to the main menu](file:MainMenu.mlx)
+%[text] [⇦ Return to the main menu](file:../../MainMenu.m)
 %%
 %[text] %[text:anchor:H_0AAABA39] ## Local Helper Functions
 %[text] If you wish to see the details of the code, select the **View** tab and switch to **Output Inline**. Alternately, select **Output inline** using the icon ![live script output inline icon](text:image:9936) at the top right of the Live Editor pane.
@@ -43,6 +43,11 @@
 %
 % or functions should be collected in the HelperFunctions folder
 % depending on optimal pedagogical choices
+
+
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]
 %---

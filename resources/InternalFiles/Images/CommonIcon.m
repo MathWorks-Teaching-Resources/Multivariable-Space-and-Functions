@@ -14,6 +14,11 @@
 %[text] %[text:anchor:H_456B8463] ## **Simulink Toolstrip Icon**
 %[text] 
 
+
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
+
 %[appendix]
 %---
 %[metadata:view]

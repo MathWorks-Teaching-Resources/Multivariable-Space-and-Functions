@@ -1,7 +1,7 @@
 %[text] %[text:anchor:T_DEF03274] # Module Name *(edit module name accordingly)*
 %[text:tableOfContents]{"heading":"**Table of Contents**"}
 %[text] %[text:anchor:H_577C7603] ## Scripts
-%[text] %[text:anchor:H_BC8955C0] ### [**ScriptName.mlx**](file:Scripts/ScriptName.mlx) ***(edit text and hyperlink accordingly)*** 
+%[text] %[text:anchor:H_BC8955C0] ### [**ScriptName.mlx**](file:Scripts/ScriptTemplate.m) ***(edit text and hyperlink accordingly)***
 %[text:table]{"columnWidths":[-1,262,308],"ignoreHeader":true}
 %[text] | *(Catchy picture related to script, 170x170 pixels)* | <p>**In this script, students will...**</p><p>$\\bullet$ *(Thing students will do)*</p><p>$\\bullet$ *(Another thing students will do)*</p><p>$\\bullet$ ...</p><p></p> | <p>**Academic disciplines**</p><p>$\\bullet$ *(Academic discipline covered)*</p><p>$\\bullet$ *(Another academic discipline covered)*</p><p>$\\bullet$ ...</p> |
 %[text] | --- | --- | --- |
@@ -9,23 +9,28 @@
 %[text] %[text:anchor:H_F61733D7] ## License
 %[text] The license for this module is available in the [LICENSE.md](https://github.com/MathWorks-Teaching-Resources/REPO_NAME/blob/release/LICENSE.md).
 %[text] %[text:anchor:H_3DE08377] ## Related Courseware Modules
-%[text] 
+%[text]
 %[text] %[text:anchor:H_868F5748] ### [Module Name](https://www.mathworks.com/matlabcentral/fileexchange/REPO_NAME) *(edit text and hyperlink accordingly)*
 %[text:table]{"columnWidths":[-1,323],"ignoreHeader":true}
 %[text] | *(Catchy picture related to module, 170x170 pixels)* | <p>**Available on:**</p><p>[![MATLAB File Exchange Icon](text:image:0d1a)](https://www.mathworks.com/matlabcentral/fileexchange/REPO_NAME) *(edit hyperlink accordingly)*</p><p>[![Open in MATLAB Online Button](text:image:4195)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/REPO_NAME&project=PROJECTNAME.prj) *(edit hyperlink accordingly)*</p><p>[GitHub](https://github.com/MathWorks-Teaching-Resources/REPO_NAME) *(edit hyperlink accordingly)*</p> |
 %[text] | --- | --- |
 %[text:table]
-%[text] %[text:anchor:H_7DE4C80F] ### 
+%[text] %[text:anchor:H_7DE4C80F] ###
 %[text] Or feel free to explore our other [modular courseware content](https://www.mathworks.com/matlabcentral/fileexchange/?q=tag%3A%22courseware+module%22&sort=downloads_desc_30d).
 %[text] %[text:anchor:H_CD56F44E] ## Educator Resources
 %[text] - [Educator Page](https://www.mathworks.com/academia/educators.html) \
 %[text] Looking for more? Find an issue? Have a suggestion? Please contact the [MathWorks teaching resources team](mailto:%20onlineteaching@mathworks.com).
-%[text] 
-%[text] %[text:anchor:H_F10FBF7B] ## [README](file:README.mlx)
-%[text] %[text:anchor:H_0FA5DA18] ## Contribute 
+%[text]
+%[text] %[text:anchor:H_F10FBF7B] ## [README](file:README.m)
+%[text] %[text:anchor:H_0FA5DA18] ## Contribute
 %[text] Looking for more? Find an issue? Have a suggestion? Please contact the [MathWorks teaching resources team](mailto:%20onlineteaching@mathworks.com). If you want to contribute directly to this project, you can find information about how to do so in the [CONTRIBUTING.md](https://github.com/MathWorks-Teaching-Resources/REPO_NAME/blob/release/CONTRIBUTING.md)  *(edit hyperlink accordingly)* page on GitHub.
-%[text] 
+%[text]
 %[text] *©* Copyright 2024 The MathWorks™, Inc
+
+
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]
 %---

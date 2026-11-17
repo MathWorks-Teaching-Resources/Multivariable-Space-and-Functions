@@ -34,6 +34,11 @@
 %[text] 
 %[text] 
 
+
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
+
 %[appendix]
 %---
 %[metadata:view]

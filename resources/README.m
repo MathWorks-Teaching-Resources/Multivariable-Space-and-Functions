@@ -1,25 +1,25 @@
 %[text] %[text:anchor:T_DEF03274] # Module Name *(edit module name accordingly)*
 %[text] %[text:anchor:H_053613DF] ## Information
 %[text] This curriculum module contains interactive [MATLAB® live scripts](https://www.mathworks.com/products/matlab/live-editor.html) that \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ *(one sentence overview of module contents)*.
-%[text] 
+%[text]
 %[text] %[text:anchor:H_F00D98E4] ### Background
 %[text] You can use these live scripts as demonstrations in lectures, class activities, or interactive assignments outside class. This module covers \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ *(list of topics)*. It also includes examples of \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ *(list of examples/applications)*.
 %[text] The instructions inside the live scripts will guide you through the exercises and activities. Get started with each live script by running it one section at a time. To stop running the script or a section midway (for example, when an animation is in progress), use the ![Stop icon](text:image:8889) Stop button in the **RUN** section of the **Live Editor** tab in the MATLAB Toolstrip.
-%[text] 
+%[text]
 %[text] ### Contact Us
 %[text] Solutions are available upon instructor request. Contact the [MathWorks teaching resources team](mailto:onlineteaching@mathworks.com) if you would like to request solutions, provide feedback, or if you have a question.
-%[text] 
+%[text]
 %[text] %[text:anchor:H_30BC7141] ### Prerequisites
 %[text] This module assumes knowledge of \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ *(list of prerequisites with links to relevant materials to ramp up if necessary)*.
-%[text] 
+%[text]
 %[text] %[text:anchor:H_330E72C3] ### Getting Started
 %[text] #### Accessing the Module
 %[text] #### **On MATLAB Online:**
 %[text] Use the [![Open in MATLAB Online Button](text:image:2c6c)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/REPO_NAME&project=PROJECTNAME.prj) *(edit Open in MATLAB Online link accordingly)* link to download the module. You will be prompted to log in or create a MathWorks account. The project will be loaded, and you will see an app with several navigation options to get you started.
 %[text] #### **On Desktop:**
-%[text] Download or clone this repository. Open MATLAB, navigate to the folder containing these scripts and double-click on [PROJECTNAME.prj](<matlab: openProject("PROJECTNAME.prj")>) *(edit text and hyperlink accordingly)*. It will add the appropriate files to your MATLAB path and open an app that asks you where you would like to start. 
-%[text] Ensure you have all the required products ([listed below](internal:H_E850B4FF)) installed. If you need to include a product, add it using the Add-On Explorer. To install an add-on, go to the **Home** tab and select  ![Add-ons icon](text:image:254a) **Add-Ons** \> **Get Add-Ons**. 
-%[text] 
+%[text] Download or clone this repository. Open MATLAB, navigate to the folder containing these scripts and double-click on [PROJECTNAME.prj](<matlab: openProject("PROJECTNAME.prj")>) *(edit text and hyperlink accordingly)*. It will add the appropriate files to your MATLAB path and open an app that asks you where you would like to start.
+%[text] Ensure you have all the required products ([listed below](internal:H_E850B4FF)) installed. If you need to include a product, add it using the Add-On Explorer. To install an add-on, go to the **Home** tab and select  ![Add-ons icon](text:image:254a) **Add-Ons** \> **Get Add-Ons**.
+%[text]
 %[text] %[text:anchor:H_E850B4FF] ### Products
 %[text] \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ *(typically MATLAB and/or Simulink)* is used throughout. Tools from \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ *(list of other used toolboxes)* are used frequently as well. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ *(function from following toolbox)* is used from \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ *(toolbox containing previously mentioned function).*
 %[text] *List of common products (not to be included in published README):*
@@ -33,7 +33,7 @@
 %[text] - Symbolic Math Toolbox™ \
 %[text] *If your module uses a product not on this list, you can find it* [*here*](https://www.mathworks.com/products.html)*.*
 %[text] %[text:anchor:H_E8C62B23] ## Scripts
-%[text] ### [**ScriptName.mlx**](file:ScriptName.mlx) ***(edit text and hyperlink accordingly)*** 
+%[text] ### [**ScriptName.mlx**](file:Scripts/ScriptTemplate.m) ***(edit text and hyperlink accordingly)***
 %[text:table]{"columnWidths":[-1,262,308],"ignoreHeader":true}
 %[text] | *(Catchy picture related to script, 170x170 pixels)* | <p>**In this script, students will...**</p><p>$\\bullet$ *(Thing students will do)*</p><p>$\\bullet$ *(Another thing students will do)*</p><p>$\\bullet$ ...</p><p></p> | <p>**Academic disciplines**</p><p>$\\bullet$ *(Academic discipline covered)*</p><p>$\\bullet$ *(Another academic discipline covered)*</p><p>$\\bullet$ ...</p> |
 %[text] | --- | --- | --- |
@@ -41,21 +41,26 @@
 %[text] %[text:anchor:H_F61733D7] ## License
 %[text] The license for this module is available in the [LICENSE.md](https://github.com/MathWorks-Teaching-Resources/REPO_NAME/blob/release/LICENSE.md).
 %[text] ## Related Courseware Modules
-%[text] 
+%[text]
 %[text] %[text:anchor:H_868F5748] ### [Module Name](https://www.mathworks.com/matlabcentral/fileexchange/REPO_NAME) *(edit text and hyperlink accordingly)*
 %[text:table]{"columnWidths":[-1,323],"ignoreHeader":true}
 %[text] | *(Catchy picture related to module, 170x170 pixels)* | <p>**Available on:**</p><p>[![MATLAB File Exchange Icon](text:image:1ebe)](https://www.mathworks.com/matlabcentral/fileexchange/REPO_NAME) *(edit hyperlink accordingly)*</p><p>[![Open in MATLAB Online Button](text:image:50fa)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/REPO_NAME&project=PROJECTNAME.prj) *(edit hyperlink accordingly)*</p><p>[GitHub](https://github.com/MathWorks-Teaching-Resources/REPO_NAME) *(edit hyperlink accordingly)*</p> |
 %[text] | --- | --- |
 %[text:table]
-%[text] 
+%[text]
 %[text] Or feel free to explore our other [modular courseware content](https://www.mathworks.com/matlabcentral/fileexchange/?q=tag%3A%22courseware+module%22&sort=downloads_desc_30d).
 %[text] ## Educator Resources
 %[text] - [Educator Page](https://www.mathworks.com/academia/educators.html) \
-%[text] %[text:anchor:H_0FA5DA18] ## Contribute 
+%[text] %[text:anchor:H_0FA5DA18] ## Contribute
 %[text] Looking for more? Find an issue? Have a suggestion? Please contact the [MathWorks teaching resources team](mailto:%20onlineteaching@mathworks.com). If you want to contribute directly to this project, you can find information about how to do so in the [CONTRIBUTING.md](https://github.com/MathWorks-Teaching-Resources/REPO_NAME/blob/release/CONTRIBUTING.md)  *(edit hyperlink accordingly)* page on GitHub.
-%[text] 
+%[text]
 %[text] *©* Copyright 2024 The MathWorks™, Inc
-%[text] 
+%[text]
+
+
+%%
+%[text] ## Help us Improve
+%[text] [Share your feedback](<matlab: ShareFeedback>) to help us improve this module.
 
 %[appendix]
 %---
